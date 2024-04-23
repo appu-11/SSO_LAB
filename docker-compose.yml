@@ -1,0 +1,22 @@
+version: '3'
+services:
+  frontend1:
+    build:
+      context: ./frontend1
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+
+  frontend2:
+    build:
+      context: ./frontend2
+      dockerfile: dockerfile
+    ports:
+      - "3001:3000"
+
+  server:
+    build:
+      context: ./server
+      dockerfile: dockerfile
+    ports:
+      - "8000:8000"
